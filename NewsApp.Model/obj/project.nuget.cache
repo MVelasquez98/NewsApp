@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9ntnZzWH5Ij9r5kk5nJSf3y9gCz9oEhetR89K+NBKMfKMWVRmEe4pP+3IQNxBBWa+tW21YwVD0mvYE8MF2gUdg==",
+  "dgSpecHash": "AKurzTYdPD6ji63U8oxPQCUi11CEU3FQfngiWubMQio62pTkEK23blEPdJf3g+Lq/qdg1+8V6YRwatL12SvJRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj",
+  "projectFilePath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

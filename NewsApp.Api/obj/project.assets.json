@@ -1074,11 +1074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
+      "projectUniqueName": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
       "projectName": "NewsApp.Api",
-      "projectPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
+      "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
       "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Api\\obj\\",
+      "outputPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1098,8 +1098,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Core\\NewsApp.Core.csproj": {
-              "projectPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Core\\NewsApp.Core.csproj"
+            "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Core\\NewsApp.Core.csproj": {
+              "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Core\\NewsApp.Core.csproj"
             }
           }
         }

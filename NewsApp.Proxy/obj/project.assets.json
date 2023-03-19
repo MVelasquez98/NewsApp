@@ -1139,11 +1139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
+      "projectUniqueName": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
       "projectName": "NewsApp.Proxy",
-      "projectPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
+      "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
       "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Proxy\\obj\\",
+      "outputPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Proxy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1163,8 +1163,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj": {
-              "projectPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj"
+            "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj": {
+              "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj"
             }
           }
         }

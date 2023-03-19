@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sUXrJioOSBkmFalU8fMM1+D6Q/PJuutN6xdqv1/MGszahD9ujG2Y+XUjLjWZTuPhudUIr38Qf1oETR0S07n9Ew==",
+  "dgSpecHash": "AVIJPDNr9wyfyqzHWX+Y3hVtvLpkNpt+IBiovxU3yaLrAEMS1pqLdOhls4h93reqga9Pjc9KYsjCjxuBqe0+Ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
+  "projectFilePath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Api\\NewsApp.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mvelasquez\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\mvelasquez\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

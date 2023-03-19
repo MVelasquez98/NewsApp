@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EmNAXItmncVYss52tCwZS4ndhk+LkS2nlk5EMKr+nqcPQWpZaGtf6QZjtyvPp6rop/7Bq+lcsr0rgS4AYZeOJA==",
+  "dgSpecHash": "wId41RJk2oxyP08ozLqTibaHanAvfbNgl3fewgZsz+OciWgJMgE2OnMq+l0E6o7n7gTUxPlzoMJhS8vw4gsdxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
+  "projectFilePath": "C:\\Users\\mvelasquez\\source\\repos\\NewsApp\\NewsApp.Proxy\\NewsApp.Proxy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mvelasquez\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\mvelasquez\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
