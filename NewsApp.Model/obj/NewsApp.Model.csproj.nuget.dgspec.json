@@ -1,32 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/mvelasquez@lanacion.com.ar/Repos/NewsApiServices/NewsApp.Model/NewsApp.Model.csproj": {}
+    "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj": {}
   },
   "projects": {
-    "/home/mvelasquez@lanacion.com.ar/Repos/NewsApiServices/NewsApp.Model/NewsApp.Model.csproj": {
+    "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mvelasquez@lanacion.com.ar/Repos/NewsApiServices/NewsApp.Model/NewsApp.Model.csproj",
+        "projectUniqueName": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj",
         "projectName": "NewsApp.Model",
-        "projectPath": "/home/mvelasquez@lanacion.com.ar/Repos/NewsApiServices/NewsApp.Model/NewsApp.Model.csproj",
-        "packagesPath": "/home/mvelasquez@lanacion.com.ar/.nuget/packages/",
-        "outputPath": "/home/mvelasquez@lanacion.com.ar/Repos/NewsApiServices/NewsApp.Model/obj/",
+        "projectPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\NewsApp.Model.csproj",
+        "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mvelasquez\\Source\\Repos\\NewsApp\\NewsApp.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/mvelasquez@lanacion.com.ar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mvelasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -38,6 +41,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -56,7 +60,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.416/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
