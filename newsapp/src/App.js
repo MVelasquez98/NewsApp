@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NewsPage from './pages/NewsPage';
 
 function App() {
     return (
         <Router>
-            <Route path="/news" component={NewsPage} />
+            <Routes>
+                <Route path="/news" element={<NewsPage />} />
+            </Routes>
         </Router>
     );
 }
