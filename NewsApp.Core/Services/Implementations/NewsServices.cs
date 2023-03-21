@@ -23,6 +23,13 @@ namespace NewsApp.Core.Services.Implementations
             var result = await _newsDataProvider.GetNewsAsync(query);
             return result;
         }
+
+        public async Task<List<Article>> GetTopHeadlinesAsync(string country, int page, int pageSize)
+        {
+            var query = _queryBuilder.BuildTopHeadlinesQuery(country, page, pageSize);
+            var result = await _newsDataProvider.GetTopHeadlinesAsync(query);
+            return result;
+        }
     }
 
 }

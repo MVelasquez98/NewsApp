@@ -1,5 +1,7 @@
 ﻿using NewsApp.Core.Services.Contracts;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NewsApp.Core.Services.Implementations
 {
@@ -27,6 +29,19 @@ namespace NewsApp.Core.Services.Implementations
             query += $"&page={page}&pageSize={pageSize}";
 
             return query;
+        }
+
+        public string BuildTopHeadlinesQuery(string country, int page, int pageSize)
+        {
+            var queryParameters = new Dictionary<string, string>
+        {
+            { "country", country },
+            { "page", page.ToString() },
+            { "pageSize", pageSize.ToString() },
+        };
+
+            var queryString = string.Join("&", queryParameters.Select(x => $"{x.Key}={x.Value}"));
+            return queryString;
         }
     }
 }

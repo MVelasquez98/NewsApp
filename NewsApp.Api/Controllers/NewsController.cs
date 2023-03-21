@@ -40,5 +40,28 @@ namespace NewsApp.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        [HttpGet("top-headlines")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<List<Article>>> GetTopHeadlinesAsync([FromQuery] string country, [FromQuery] int page, [FromQuery] int pageSize)
+        {
+            try
+            {
+                var news = await _newsService.GetTopHeadlinesAsync(country, page, pageSize);
+                if (news != null && news.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(news);
+            }
+            catch (Exception ex)
+            {
+                // log the exception
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
     }
 }

@@ -23,11 +23,8 @@ namespace NewsProxy.Services.Implementations
             _apiKey = _configuration.GetSection("NewsApi:ApiKey").Value;
             _baseUrl = _configuration.GetSection("NewsApi:BaseUrl").Value;
         }
-
-
-        public async Task<List<Article>> GetNewsAsync(string query)
+        private async Task<List<Article>> GetArticlesAsync(string url)
         {
-            var url = $"{_baseUrl}everything?{query}&apiKey={_apiKey}";
             var response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
@@ -38,6 +35,17 @@ namespace NewsProxy.Services.Implementations
             }
 
             return null;
+        }
+        public async Task<List<Article>> GetNewsAsync(string query)
+        {
+            var url = $"{_baseUrl}everything?{query}&apiKey={_apiKey}";
+            return await GetArticlesAsync(url);
+        }
+
+        public async Task<List<Article>> GetTopHeadlinesAsync(string query)
+        {
+            var url = $"{_baseUrl}top-headlines?{query}&apiKey={_apiKey}";
+            return await GetArticlesAsync(url);
         }
 
     }

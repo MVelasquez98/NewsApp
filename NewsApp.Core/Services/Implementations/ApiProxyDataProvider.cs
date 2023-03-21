@@ -24,6 +24,12 @@ namespace NewsApp.Core.Services.Implementations
             var result = await _newsProxyService.GetNewsAsync(query);
             return result;
         }
+
+        public async Task<List<Article>> GetTopHeadlinesAsync(string query)
+        {
+            var result = await _newsProxyService.GetTopHeadlinesAsync(query);
+            return result;
+        }
     }
 }
 

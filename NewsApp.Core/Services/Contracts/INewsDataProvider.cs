@@ -7,5 +7,6 @@ namespace NewsApp.Core.Services.Contracts
     public interface INewsDataProvider
     {
         Task<List<Article>> GetNewsAsync(string query);
+        Task<List<Article>> GetTopHeadlinesAsync(string query);
     }
 }
