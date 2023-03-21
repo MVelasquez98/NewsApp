@@ -11,24 +11,19 @@ namespace NewsApp.Core.Services.Implementations
     public class ApiProxyDataProvider : INewsDataProvider
     {
         private readonly INewApiProxysService _newsProxyService;
-        private readonly HttpClient _httpClient;
 
-        public ApiProxyDataProvider(HttpClient httpClient ,INewApiProxysService newsProxyService)
+        public ApiProxyDataProvider(INewApiProxysService newsProxyService)
         {
-            _httpClient = httpClient;
             _newsProxyService = newsProxyService;
         }
-
-        public async Task<List<Article>> GetNewsAsync(string query)
+        public async Task<List<Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize)
         {
-            var result = await _newsProxyService.GetNewsAsync(query);
-            return result;
+            return await _newsProxyService.GetNewsAsync(dateFrom,  dateTo,  keywords,  page,  pageSize);
         }
 
-        public async Task<List<Article>> GetTopHeadlinesAsync(string query)
+        public async Task<List<Article>> GetTopHeadlinesAsync(string country, int page, int pageSize)
         {
-            var result = await _newsProxyService.GetTopHeadlinesAsync(query);
-            return result;
+            return await _newsProxyService.GetTopHeadlinesAsync(country, page, pageSize);
         }
     }
 }

@@ -8,10 +8,7 @@ using NewsApp.Core.Services.Contracts;
 using NewsApp.Core.Services.Implementations;
 using NewsApp.Proxy.Services.Contracts;
 using NewsProxy.Services.Implementations;
-using System;
-using System.IO;
 using System.Net.Http;
-using System.Reflection;
 
 namespace NewsApp.Api
 {
@@ -30,11 +27,8 @@ namespace NewsApp.Api
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true) // agregamos el archivo appsettings.json de Proxy
     .Build();
             services.AddControllers();
-            services.AddHttpClient();
-            services.AddHttpClient<INewApiProxysService, NewsApiProxyService>();
-            services.AddSingleton<HttpClient>();
+            services.AddSingleton<INewApiProxysService, NewsApiProxyService>();
             services.AddSingleton<INewsDataProvider, ApiProxyDataProvider>();
-            services.AddSingleton<INewsQueryBuilder, DefaultNewsQueryBuilder>();
             services.AddSingleton<INewsService, NewsService>();
             services.AddSwaggerGen(c =>
             {

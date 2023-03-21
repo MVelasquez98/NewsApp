@@ -9,26 +9,20 @@ namespace NewsApp.Core.Services.Implementations
     public class NewsService : INewsService
     {
         private readonly INewsDataProvider _newsDataProvider;
-        private readonly INewsQueryBuilder _queryBuilder;
 
-        public NewsService(INewsDataProvider newsDataProvider, INewsQueryBuilder queryBuilder)
+        public NewsService(INewsDataProvider newsDataProvider)
         {
             _newsDataProvider = newsDataProvider;
-            _queryBuilder = queryBuilder;
         }
 
         public async Task<List<Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize)
         {
-            var query = _queryBuilder.BuildQuery(dateFrom, dateTo, keywords, page, pageSize);
-            var result = await _newsDataProvider.GetNewsAsync(query);
-            return result;
+            return await _newsDataProvider.GetNewsAsync(dateFrom, dateTo, keywords, page, pageSize); ;
         }
 
         public async Task<List<Article>> GetTopHeadlinesAsync(string country, int page, int pageSize)
         {
-            var query = _queryBuilder.BuildTopHeadlinesQuery(country, page, pageSize);
-            var result = await _newsDataProvider.GetTopHeadlinesAsync(query);
-            return result;
+            return await _newsDataProvider.GetTopHeadlinesAsync(country, page, pageSize);
         }
     }
 
