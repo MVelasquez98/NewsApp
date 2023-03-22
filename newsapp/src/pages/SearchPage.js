@@ -40,7 +40,7 @@ function SearchPage() {
   const [country, setCountry] = useState('en');
 
   useEffect(() => {
-    const url= `https://localhost:5001/api/news/search?dateFrom=${fromDate}&dateTo=${toDate}&keywords=${query}&page=${page}&pageSize=${pageSize}&language=${country}`;  
+    const url= `${process.env.REACT_APP_API_BASE_URL}/api/news/search?dateFrom=${fromDate}&dateTo=${toDate}&keywords=${query}&page=${page}&pageSize=${pageSize}&language=${country}`;  
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -57,7 +57,7 @@ function SearchPage() {
 
   const handleChangeCountry = (event) => {
     setCountry(event.target.value);
-    setPage(1); // Reset page to 1 when country is changed
+    setPage(1);
   };
 
   const handleChangePage = (event, value) => {

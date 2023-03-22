@@ -37,17 +37,16 @@ function NewsPage() {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
-
   useEffect(() => {
     fetch(
-      `https://localhost:5001/api/news/top-headlines?country=${country}&pageSize=${pageSize}&page=${page}`)
+      `${process.env.REACT_APP_API_BASE_URL}/api/news/top-headlines?country=${country}&pageSize=${pageSize}&page=${page}`)
       .then((response) => response.json())
       .then((data) => setNews(data));
   }, [country, pageSize, page]);
 
   const handleChangeCountry = (event) => {
     setCountry(event.target.value);
-    setPage(1); // Reset page to 1 when country is changed
+    setPage(1);
   };
 
   const handleChangePage = (event, value) => {
@@ -56,7 +55,7 @@ function NewsPage() {
 
   const handleChangePageSize = (event) => {
     setPageSize(event.target.value);
-    setPage(1); // Reset page to 1 when page size is changed
+    setPage(1); 
   };
 
   return (
