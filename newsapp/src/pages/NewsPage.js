@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Select, MenuItem, Typography, InputLabel} from '@material-ui/core';
+import { Grid, Paper, Select, MenuItem, Typography, InputLabel } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import NewsList from '../components/NewsList';
 import Pagination from '@material-ui/lab/Pagination';
 
@@ -13,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    display: 'flex',
+    alignItems: 'center',
   },
   formControl: {
     margin: theme.spacing(1),
@@ -62,19 +65,24 @@ function NewsPage() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-          <InputLabel id="select-pais-label">País:</InputLabel>
-            <Select
-              labelId="select-pais-label"
-              value={country}
-              onChange={handleChangeCountry}
-              className={classes.selectEmpty}
-            >
-              <MenuItem value={'us'}>US</MenuItem>
-              <MenuItem value={'ar'}>Argentina</MenuItem>
-            </Select>
             <Typography variant="h4" component="h1" align="center">
               Ultimas Noticias
             </Typography>
+            <div className={classes.navbar}>
+              <InputLabel id="select-pais-label">País:</InputLabel>
+              <Select
+                labelId="select-pais-label"
+                value={country}
+                onChange={handleChangeCountry}
+                className={classes.selectEmpty}
+              >
+                <MenuItem value={'us'}>US</MenuItem>
+                <MenuItem value={'ar'}>Argentina</MenuItem>
+              </Select>
+              <Link to="/search">
+                <button>Buscar</button>
+              </Link>
+            </div>
           </Paper>
         </Grid>
         <Grid item xs={12}>
@@ -82,7 +90,7 @@ function NewsPage() {
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-          <InputLabel id="select-results-label">Mostrar resultados:</InputLabel>
+            <InputLabel id="select-results-label">Mostrar resultados:</InputLabel>
             <Select
               labelId="select-results-label"
               value={pageSize}
