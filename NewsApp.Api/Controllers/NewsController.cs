@@ -21,13 +21,13 @@ namespace NewsApp.Api.Controllers
 
         [HttpGet("search")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<List<Article>>> GetNewsAsync([FromQuery] string dateFrom, [FromQuery] string dateTo, [FromQuery] string keywords, [FromQuery] int page, [FromQuery] int pageSize)
+        public async Task<ActionResult<List<Article>>> GetNewsAsync([FromQuery] string dateFrom, [FromQuery] string dateTo, [FromQuery] string keywords, [FromQuery] int page, [FromQuery] int pageSize, [FromQuery] string language)
         {
             try
             {
-                var news = await _newsService.GetNewsAsync(dateFrom, dateTo, keywords, page, pageSize);
+                var news = await _newsService.GetNewsAsync(dateFrom, dateTo, keywords, page, pageSize, language);
                 if (news != null && news.Count == 0)
                 {
                     return NoContent();
@@ -43,7 +43,7 @@ namespace NewsApp.Api.Controllers
 
         [HttpGet("top-headlines")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<List<Article>>> GetTopHeadlinesAsync([FromQuery] string country, [FromQuery] int page, [FromQuery] int pageSize)
         {

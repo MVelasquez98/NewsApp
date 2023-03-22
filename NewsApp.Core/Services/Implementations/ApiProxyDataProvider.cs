@@ -16,15 +16,9 @@ namespace NewsApp.Core.Services.Implementations
         {
             _newsProxyService = newsProxyService;
         }
-        public async Task<List<Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize)
-        {
-            return await _newsProxyService.GetNewsAsync(dateFrom,  dateTo,  keywords,  page,  pageSize);
-        }
+        public async Task<List<Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize, string language) => await _newsProxyService.GetNewsAsync(dateFrom, dateTo, keywords, page, pageSize, language);
 
-        public async Task<List<Article>> GetTopHeadlinesAsync(string country, int page, int pageSize)
-        {
-            return await _newsProxyService.GetTopHeadlinesAsync(country, page, pageSize);
-        }
+        public async Task<List<Article>> GetTopHeadlinesAsync(string country, int page, int pageSize) => await _newsProxyService.GetTopHeadlinesAsync(country, page, pageSize);
     }
 }
 

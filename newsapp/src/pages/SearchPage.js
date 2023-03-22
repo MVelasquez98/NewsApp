@@ -37,9 +37,10 @@ function SearchPage() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [totalResults, setTotalResults] = useState(0);
+  const [country, setCountry] = useState('en');
 
   useEffect(() => {
-    const url= `https://localhost:5001/api/news/search?dateFrom=${fromDate}&dateTo=${toDate}&keywords=${query}&page=${page}&pageSize=${pageSize}`;  
+    const url= `https://localhost:5001/api/news/search?dateFrom=${fromDate}&dateTo=${toDate}&keywords=${query}&page=${page}&pageSize=${pageSize}&language=${country}`;  
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -52,7 +53,12 @@ function SearchPage() {
         }
       })
       .catch((error) => console.error(error));
-  }, [query, fromDate, toDate, pageSize, page]);
+  }, [query, fromDate, toDate, pageSize, page,country]);
+
+  const handleChangeCountry = (event) => {
+    setCountry(event.target.value);
+    setPage(1); // Reset page to 1 when country is changed
+  };
 
   const handleChangePage = (event, value) => {
     setPage(value);
@@ -112,9 +118,20 @@ function SearchPage() {
                 onChange={handleQueryChange}
                 className={classes.textField}
               />
+              <InputLabel id="select-pais-label">País:</InputLabel>
+              <Select
+                labelId="select-pais-label"
+                value={country}
+                onChange={handleChangeCountry}
+                className={classes.selectEmpty}
+              >
+                <MenuItem value={'en'}>US</MenuItem>
+                <MenuItem value={'es'}>Argentina</MenuItem>
+              </Select>
               <Button type="submit" variant="contained" color="primary">
                 Buscar
               </Button>
+              
             </form>
           </Paper>
         </Grid>

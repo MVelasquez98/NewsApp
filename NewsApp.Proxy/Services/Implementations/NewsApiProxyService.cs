@@ -22,16 +22,22 @@ namespace NewsProxy.Services.Implementations
             _apiKey = _configuration.GetSection("NewsApi:ApiKey").Value;
         }
 
-        public async Task<List<NewsApp.Model.Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize)
+        public async Task<List<NewsApp.Model.Article>> GetNewsAsync(string dateFrom, string dateTo, string keywords, int page, int pageSize, string language)
         {
             var newsApiClient = new NewsApiClient(_apiKey);
+            Languages languageParse;
+            if (!Enum.TryParse(language.ToUpper(), out languageParse))
+            {
+                throw new ArgumentException($"Invalid language: {language}");
+            }
             var articlesResponse = await newsApiClient.GetEverythingAsync(new EverythingRequest
             {
                 From = DateTime.Parse(dateFrom),
                 To = DateTime.Parse(dateTo),
                 Q = keywords,
                 Page = page,
-                PageSize = pageSize
+                PageSize = pageSize,
+                Language = languageParse
             });
 
             return articlesResponse.Status == Statuses.Ok

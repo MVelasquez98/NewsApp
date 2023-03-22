@@ -79,7 +79,7 @@ function NewsPage() {
                 <MenuItem value={'ar'}>Argentina</MenuItem>
               </Select>
               <Link to="/search">
-                <button>Buscar</button>
+                <button>Buscar Noticias</button>
               </Link>
             </div>
           </Paper>
