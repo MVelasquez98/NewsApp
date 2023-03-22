@@ -43,7 +43,7 @@ namespace NewsProxy.Services.Implementations
         {
             var newsApiClient = new NewsApiClient(_apiKey);
             Countries countryParse;
-            if (!Enum.TryParse(country, out countryParse))
+            if (!Enum.TryParse(country.ToUpper(), out countryParse))
             {
                 throw new ArgumentException($"Invalid country: {country}");
             }

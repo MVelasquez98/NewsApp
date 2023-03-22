@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const NewsList = ({ news }) => {
   const classes = useStyles();
 
-  if (news.length === 0) {
+  if (!news ||news.length === 0) {
     return (
       <Typography variant="h5" align="center" className={classes.error}>
         No se encontraron resultados para su búsqueda.

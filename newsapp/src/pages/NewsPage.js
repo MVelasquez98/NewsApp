@@ -40,10 +40,9 @@ function NewsPage() {
 
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&pageSize=${pageSize}&page=${page}&apiKey=9e8a123eec974a9e9228d32c40439452`
-    )
+      `https://localhost:5001/api/news/top-headlines?country=${country}&pageSize=${pageSize}&page=${page}`)
       .then((response) => response.json())
-      .then((data) => setNews(data.articles));
+      .then((data) => setNews(data));
   }, [country, pageSize, page]);
 
   const handleChangeCountry = (event) => {

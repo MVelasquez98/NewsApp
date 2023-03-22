@@ -39,14 +39,13 @@ function SearchPage() {
   const [totalResults, setTotalResults] = useState(0);
 
   useEffect(() => {
-    const url = `https://newsapi.org/v2/everything?q=${query}&from=${fromDate}&to=${toDate}&pageSize=${pageSize}&page=${page}&apiKey=9e8a123eec974a9e9228d32c40439452`;
-  
+    const url= `https://localhost:5001/api/news/search?dateFrom=${fromDate}&dateTo=${toDate}&keywords=${query}&page=${page}&pageSize=${pageSize}`;  
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        if (data.articles) {
-          setNews(data.articles);
-          setTotalResults(data.totalResults);
+        if (data) {
+          setNews(data);
+          setTotalResults(data.length);
         } else {
           setNews([]);
           setTotalResults(0);
